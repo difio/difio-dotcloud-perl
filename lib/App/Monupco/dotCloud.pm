@@ -19,12 +19,18 @@ use warnings;
 use JSON;
 use LWP::UserAgent;
 
+# load dotCloud environment
+local $/;
+open( my $fh, '<', '/home/dotcloud/environment.json' );
+$json_text   = <$fh>;
+$dotcloud_env = decode_json( $json_text );
+
 my $data = {
     'user_id'    => $ENV{'MONUPCO_USER_ID'},
-    'app_name'   => $ENV{'DOTCLOUD_PROJECT'} + "." + $ENV{'DOTCLOUD_SERVICE_NAME'},
-    'app_uuid'   => $ENV{'DOTCLOUD_WWW_HTTP_HOST'},
+    'app_name'   => $dotcloud_env{'DOTCLOUD_PROJECT'} + "." + $dotcloud_env{'DOTCLOUD_SERVICE_NAME'},
+    'app_uuid'   => $dotcloud_env{'DOTCLOUD_WWW_HTTP_HOST'},
     'app_type'   => "perl",
-    'app_url'    => $ENV{'DOTCLOUD_WWW_HTTP_URL'},
+    'app_url'    => $dotcloud_env{'DOTCLOUD_WWW_HTTP_URL'},
     'app_vendor' => 1,   # dotCloud
     'pkg_type'   => 400, # Perl / CPAN
     'installed'  => [],
