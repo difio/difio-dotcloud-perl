@@ -25,7 +25,7 @@ To register your dotCloud Perl application to Monupco do the following:
 
 4) Enable the registration script in your postinstall hook. **Note:**
 If you are using an "approot" your `postinstall` script should be in the 
-directory pointed by the “approot” directive of your `dotcloud.yml`.
+directory pointed by the "approot" directive of your `dotcloud.yml`.
 For more information about `postinstall` turn to 
 http://docs.dotcloud.com/guides/postinstall/.
 
