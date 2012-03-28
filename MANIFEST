@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/App-Monupco-dotCloud.t
+lib/App/Monupco/dotCloud.pm
+lib/App/Monupco/dotCloud/Parser.pm
