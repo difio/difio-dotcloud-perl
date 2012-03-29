@@ -14,7 +14,7 @@ WriteMakefile(
             homepage   => 'https://github.com/monupco/monupco-dotcloud-perl',
         },
     },
-    PREREQ_PM         => {JSON => 0, LWP::UserAgent => 0, Pod::Simple => 0, Crypt::SSLeay => 0},
+    PREREQ_PM         => {JSON => 0, LWP::UserAgent => 0, LWP::Protocol::https => 0, Pod::Simple => 0},
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
        (AUTHOR         => 'Alexander Todorov <atodorov@otb.bg>') : ()),
 );
