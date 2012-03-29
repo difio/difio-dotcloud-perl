@@ -7,7 +7,7 @@
 #####################################################################################
 
 package App::Monupco::dotCloud;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 our $NAME = "monupco-dotcloud-perl";
 
 use App::Monupco::dotCloud::Parser;
@@ -22,8 +22,8 @@ use LWP::UserAgent;
 # load dotCloud environment
 local $/;
 open( my $fh, '<', '/home/dotcloud/environment.json' );
-$json_text   = <$fh>;
-$dotcloud_env = decode_json( $json_text );
+my $json_text   = <$fh>;
+my $dotcloud_env = decode_json( $json_text );
 
 my $data = {
     'user_id'    => $ENV{'MONUPCO_USER_ID'},
