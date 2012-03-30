@@ -7,7 +7,7 @@
 #####################################################################################
 
 package App::Monupco::dotCloud;
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 our $NAME = "monupco-dotcloud-perl";
 
 use App::Monupco::dotCloud::Parser;
@@ -29,7 +29,7 @@ my $data = {
     'user_id'    => $dotcloud_env->{'MONUPCO_USER_ID'},
     'app_name'   => $dotcloud_env->{'DOTCLOUD_PROJECT'}.".".$dotcloud_env->{'DOTCLOUD_SERVICE_NAME'},
     'app_uuid'   => $dotcloud_env->{'DOTCLOUD_WWW_HTTP_HOST'},
-    'app_type'   => "perl",
+    'app_type'   => "Perl",
     'app_url'    => $dotcloud_env->{'DOTCLOUD_WWW_HTTP_URL'},
     'app_vendor' => 1,   # dotCloud
     'pkg_type'   => 400, # Perl / CPAN
