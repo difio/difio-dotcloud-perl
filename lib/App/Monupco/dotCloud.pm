@@ -113,7 +113,6 @@ If a file named `postinstall` doesn't already exist, create it and add the follo
 7) If everything goes well you should see something like:
 
         19:55:10 [www.0] Running postinstall script...
-        19:55:13 [www.0] response:200
         19:55:13 [www.0] Monupco: Success, registered/updated application with id 34
 
 That's it, you can now check your application statistics at
