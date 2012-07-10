@@ -4,7 +4,7 @@
 #
 #####################################################################################
 
-package App::Monupco::dotCloud::Parser;
+package App::Difio::dotCloud::Parser;
 
 use Pod::Simple;
 @ISA = qw(Pod::Simple);
