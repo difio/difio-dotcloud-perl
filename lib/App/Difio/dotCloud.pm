@@ -2,12 +2,12 @@
 
 #####################################################################################
 #
-# Copyright (c) 2012, Alexander Todorov <atodorov()otb.bg>. See POD section.
+# Copyright (c) 2012, Alexander Todorov <atodorov()dif.io>. See POD section.
 #
 #####################################################################################
 
 package App::Difio::dotCloud;
-our $VERSION = '2.00';
+our $VERSION = '2.01';
 our $NAME = "difio-dotcloud-perl";
 
 use App::Difio::dotCloud::Parser;
@@ -30,7 +30,7 @@ my $data = {
     'app_name'   => $dotcloud_env->{'DOTCLOUD_PROJECT'}.".".$dotcloud_env->{'DOTCLOUD_SERVICE_NAME'},
     'app_uuid'   => $dotcloud_env->{'DIFIO_UUID'},
     'app_type'   => "Perl",
-    'app_url'    => $dotcloud_env->{'DOTCLOUD_WWW_HTTP_URL'},
+    'app_url'    => $dotcloud_env->{'DOTCLOUD_'.uc($dotcloud_env->{'DOTCLOUD_SERVICE_NAME'}).'_HTTP_URL'},
     'app_vendor' => 1,   # dotCloud
     'pkg_type'   => 400, # Perl / CPAN
     'installed'  => [],
