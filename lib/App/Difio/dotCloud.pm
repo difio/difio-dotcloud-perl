@@ -7,7 +7,7 @@
 #####################################################################################
 
 package App::Difio::dotCloud;
-our $VERSION = '2.01';
+our $VERSION = '2.02';
 our $NAME = "difio-dotcloud-perl";
 
 use App::Difio::dotCloud::Parser;
@@ -39,7 +39,7 @@ my $data = {
 my $pod_parsed = "";
 my $parser = App::Difio::dotCloud::Parser->new();
 $parser->output_string( \$pod_parsed );
-$parser->parse_file("/home/dotcloud/perl5/lib/perl5/x86_64-linux-thread-multi/perllocal.pod");
+$parser->parse_file("/home/dotcloud/perl5/lib/perl5/x86_64-linux/perllocal.pod");
 
 my @installed;
 foreach my $nv (split(/\n/, $pod_parsed)) {
